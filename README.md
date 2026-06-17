@@ -2,6 +2,11 @@
 
 Тестовое задание на позицию Junior Frontend Developer. Проект реализован на Next.js 14, React, TypeScript, React Hook Form и SCSS Modules.
 
+## Ссылки
+
+- Демо: https://saveur-booking-iota.vercel.app
+- Репозиторий: https://github.com/Cseni/saveur-booking
+
 ## Функциональность
 
 - обязательные поля: имя, телефон, дата, время и количество гостей;
@@ -64,9 +69,3 @@ src/
     validation.ts
     validation.test.ts
 ```
-
-## Публикация
-
-1. Создайте публичный репозиторий на GitHub и отправьте код.
-2. Импортируйте репозиторий в Vercel.
-3. Добавьте в ответ рекрутеру ссылки на GitHub и опубликованное превью.
