@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  min-height: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: enter 360ms ease both;
+}
+
+.icon {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--color-accent-dark);
+  box-shadow: 0 12px 30px rgba(156, 112, 39, 0.23);
+}
+
+.icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--color-accent-dark);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.container h2 {
+  margin: 0;
+  outline: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(32px, 4vw, 43px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  max-width: 370px;
+  margin: 14px 0 0;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.summary {
+  width: 100%;
+  margin: 34px 0 30px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.summary div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 2px;
+}
+
+.summary div + div {
+  border-top: 1px solid #ece9e3;
+}
+
+.summary dt {
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.summary dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.reset {
+  min-height: 48px;
+  padding: 0 23px;
+  border: 1px solid var(--color-accent-dark);
+  border-radius: 10px;
+  color: var(--color-accent-dark);
+  background: transparent;
+  font-weight: 700;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.reset:hover {
+  transform: translateY(-1px);
+  color: #ffffff;
+  background: var(--color-accent-dark);
+}
+
+.reset:focus-visible {
+  outline: 3px solid rgba(200, 150, 62, 0.35);
+  outline-offset: 3px;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    min-height: 480px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container {
+    animation: none;
+  }
+
+  .reset {
+    transition: none;
+  }
+}
